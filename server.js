@@ -15,15 +15,14 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use(express.static("public"));
-
-mongoose.connect(MONGODB_URI, {
-  useNewUrlParser: true,
-  useFindAndModify: false
-});
-
 // routes
 app.use(require("./routes/api.js"));
 
-app.listen(PORT, () => {
-  console.log(`App running on port ${PORT}!`);
+mongoose.connect(MONGODB_URI, {
+  useNewUrlParser: true,
+  useFindAndModify: false,
+  useUnifiedTopology: true
 });
+
+mongoose.set('debug', true);
+app.listen(PORT, () => console.log(`🌍 Connected on localhost:${PORT}\n http://localhost:${PORT}`));
