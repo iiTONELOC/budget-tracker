@@ -151,3 +151,7 @@ document.querySelector("#add-btn").onclick = function() {
 document.querySelector("#sub-btn").onclick = function() {
   sendTransaction(false);
 };
+
+if(window.location.protocol === 'http://'){
+  location.replace('https://thawing-savannah-19799.herokuapp.com/')
+}
