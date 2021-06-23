@@ -1,7 +1,8 @@
 const router = require("express").Router();
 const Transaction = require("../models/transaction.js");
+const path = require('path');
 
-router.post("/api/transaction", ({body}, res) => {
+router.post("/api/transaction", ({ body }, res) => {
   Transaction.create(body)
     .then(dbTransaction => {
       res.json(dbTransaction);
@@ -11,7 +12,7 @@ router.post("/api/transaction", ({body}, res) => {
     });
 });
 
-router.post("/api/transaction/bulk", ({body}, res) => {
+router.post("/api/transaction/bulk", ({ body }, res) => {
   Transaction.insertMany(body)
     .then(dbTransaction => {
       res.json(dbTransaction);
@@ -22,7 +23,7 @@ router.post("/api/transaction/bulk", ({body}, res) => {
 });
 
 router.get("/api/transaction", (req, res) => {
-  Transaction.find({}).sort({date: -1})
+  Transaction.find({}).sort({ date: -1 })
     .then(dbTransaction => {
       res.json(dbTransaction);
     })
@@ -30,5 +31,11 @@ router.get("/api/transaction", (req, res) => {
       res.status(404).json(err);
     });
 });
+
+
+// service worker
+// router.get('/service-worker.js', (req, res,) => {
+//   res.sendFile('service-worker.js', { root: __dirname })
+// })
 
 module.exports = router;
