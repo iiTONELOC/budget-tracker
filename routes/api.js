@@ -32,10 +32,4 @@ router.get("/api/transaction", (req, res) => {
     });
 });
 
-
-// service worker
-// router.get('/service-worker.js', (req, res,) => {
-//   res.sendFile('service-worker.js', { root: __dirname })
-// })
-
 module.exports = router;
