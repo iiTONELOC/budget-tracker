@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(express.static("public"));
 // routes
 app.use(require("./routes/api.js"));
-app.use(enforce.HTTPS({ trustProtoHeader: true }))
+app.use(enforce.HTTPS({ trustXForwardedHostHeader: true  }))
 mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
   useFindAndModify: false,
