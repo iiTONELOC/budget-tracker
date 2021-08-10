@@ -10,11 +10,11 @@ Budget Tracker is a single-page PWA that allows users to track their expenses on
 
 # Table of Contents
 
-*[Technology](#technology)  
-*[Features](#features)  
-*[Installation](#installation)   
-*[Questions](#questions)  
-*[License](#license)
+* [Technology](#technology)  
+* [Features](#features)  
+* [Installation](#installation)   
+* [Questions](#questions)  
+* [License](#license)
 
 
 
