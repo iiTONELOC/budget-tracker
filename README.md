@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![GitHub language count](https://img.shields.io/github/languages/count/iiTONELOC/budget-tracker?style=flat-square) ![GitHub top language](https://img.shields.io/github/languages/top/iiTONELOC/budget-tracker?style=flat-square)
 
 # Screenshot
-![Budget Tracker](Screenshot.jpg)
+![Budget Tracker](Screenshot.png)
 
 # Description
 Budget Tracker is a single-page PWA that allows users to track their expenses on the go, regardless of internet connection. 
